@@ -32,7 +32,7 @@ app.get('/', (request, response) => {
     response.json({ info: 'Node.js, Express, and Postgres API' })
   })
 
-  app.get('/api/books',book.getBooks);
+  app.get('/books',book.getBooks);
   app.post('/api/addnewbook',upload.single('file'),book.addNewBook);
   app.post('/api/editbook',upload.single('file'),book.editBook);
 
